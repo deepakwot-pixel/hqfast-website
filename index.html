@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HQFAST | Hardware-Agnostic Hybrid Compute Platform</title>
+    <meta name="description" content="HQFAST is an enterprise classical-first hybrid compute engine that solves QMA-hard and NP-hard physical simulation and optimization problems with strict, configurable cost caps.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <span class="brand-icon">⬡</span> HQFAST
+                <span class="brand-badge">v1.2</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#platform">Platform</a></li>
+                <li><a href="#cost-guard">ROI &amp; Savings</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#" onclick="openAboutModal(); return false;">About Us</a></li>
+                <li><a href="#" onclick="openContactModal(); return false;">Contact</a></li>
+            </ul>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <button class="btn-primary-sm" onclick="openContactModal()">Request Demo</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="pill-tag">
+                    <span class="pill-dot"></span> Hardware-Agnostic Hybrid Compute
+                </div>
+                
+                <h1 class="hero-title">High-Performance Classical Engine.<br><span class="highlight-text">Zero Quantum Cost Runaway.</span></h1>
+                
+                <p class="hero-subtitle">
+                    HQFAST solves intractable <strong>QMA-hard</strong> physical chemistry and <strong>NP-hard</strong> combinatorial optimization problems. By executing classical tensor networks first and enforcing <strong>configurable strict budget caps</strong>, HQFAST eliminates financial risk while remaining compatible with all leading quantum hardware backends.
+                </p>
+
+                <div class="hero-cta-group">
+                    <button class="btn-primary" onclick="openContactModal()">Schedule Enterprise Demo &rarr;</button>
+                    <button class="btn-secondary" onclick="openModal('documents/whitepaper.md')">Read Technical White Paper</button>
+                </div>
+
+                <!-- ROI & COST METRICS BAND -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-val">$120K+</div>
+                        <div class="metric-lbl">Est. Savings per Complex Material Simulation</div>
+                        <div class="metric-sub">94%+ reduction vs raw QPU shot costs</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-val">Configurable</div>
+                        <div class="metric-lbl">Strict Financial Budget Caps</div>
+                        <div class="metric-sub">User-set max job limit ($10 &ndash; $500+)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-val">100% Neutral</div>
+                        <div class="metric-lbl">Quantum Hardware Independent</div>
+                        <div class="metric-sub">Superconducting, Trapped-Ion, &amp; Neutral-Atom</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-val">&le;1.6 mHa</div>
+                        <div class="metric-lbl">Guaranteed Chemical Accuracy</div>
+                        <div class="metric-sub">Strict physical precision standard</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HARDWARE NEUTRALITY & HYBRID COMPUTING -->
+        <section id="platform" class="section-padded">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Quantum Hardware Independence</span>
+                    <h2 class="section-title">Classical-First Core. Fully Agnostic QPU Integration.</h2>
+                    <p class="section-subtitle">You are never locked into a single quantum hardware vendor. HQFAST computes the heaviest electronic wavefunctions classically via Matrix Product States (MPS-DMRG), dispatching only minimal, highly reduced QUBO sub-problems to external quantum backends.</p>
+                </div>
+
+                <div class="hybrid-visual-grid">
+                    <div class="visual-wrapper">
+                        <img src="assets/quantum_hybrid_node.png" alt="Quantum Hardware and Classical Compute Node Schematic" class="hardware-img">
+                        <div class="visual-caption">
+                            <span>HQFAST Hybrid Node Architecture: Classical Tensor HPC paired with Hardware-Neutral QPU Dispatch</span>
+                        </div>
+                    </div>
+
+                    <div class="neutrality-feature-list">
+                        <div class="feature-box">
+                            <div class="feature-icon">⚡</div>
+                            <div>
+                                <h3>Vendor-Neutral QPU Adapter Layer</h3>
+                                <p>Seamless execution across leading industry QPU physical modalities—including <strong>Superconducting Qubits</strong>, <strong>Trapped-Ion Processors</strong>, and <strong>Neutral-Atom Arrays</strong>—without altering domain logic.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box">
+                            <div class="feature-icon">🛡️</div>
+                            <div>
+                                <h3>Classical-First Fallback &amp; Acceleration</h3>
+                                <p>If QPU availability drops or queue latency spikes, HQFAST automatically executes classical tensor networks (JAX/PySCF) down to Chemical Accuracy ($\le 1.6\text{ mHa}$) without stopping work.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box">
+                            <div class="feature-icon">🧩</div>
+                            <div>
+                                <h3>Integrated QOBLIB QUBO Solvers</h3>
+                                <p>Includes built-in open-source combinatorial optimization algorithms (Apache 2.0 / CC-BY) for local, zero-cloud execution of NP-hard allocation problems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONFIGURABLE COST CONTROL & ECONOMIC ROI SECTION -->
+        <section id="cost-guard" class="section-padded bg-subtle">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Economic Safeguards</span>
+                    <h2 class="section-title">Configurable Cost Control. Zero Cloud Surprises.</h2>
+                    <p class="section-subtitle">Quantum cloud API runs can quickly balloon into tens of thousands of dollars per experiment. HQFAST's <code>CostGuardEngine</code> puts complete financial control back in your hands.</p>
+                </div>
+
+                <div class="grid-2 gap-large">
+                    <div class="roi-card">
+                        <h3 class="roi-card-title">Traditional Pure Quantum Cloud Approach</h3>
+                        <div class="cost-comparison-row bad">
+                            <span class="cost-label">Raw QPU Shot Cost per Run</span>
+                            <span class="cost-value">$125,000+</span>
+                        </div>
+                        <p class="roi-desc">Direct hardware execution of uncompressed wavefunctions leads to high shot counts, queue delays, and financial runaway.</p>
+                        <ul class="check-list error">
+                            <li>✕ Vulnerable to QPU cloud API price spikes</li>
+                            <li>✕ Unconstrained circuit depth costs</li>
+                            <li>✕ Hard vendor lock-in</li>
+                        </ul>
+                    </div>
+
+                    <div class="roi-card highlight-border">
+                        <div class="badge-recommended">HQFAST Enterprise Engine</div>
+                        <h3 class="roi-card-title">Configurable Hybrid CostGuard Engine</h3>
+                        <div class="cost-comparison-row good">
+                            <span class="cost-label">Max Configurable Budget Cap / Run</span>
+                            <span class="cost-value">$10.00 &ndash; $50.00</span>
+                        </div>
+                        <p class="roi-desc">Users define strict max spend limits per job. CostGuard dynamically clamps tensor bond dimension ($\chi \le 256$) before any remote dispatch.</p>
+                        <ul class="check-list success">
+                            <li>✓ Strict pre-flight budget verification</li>
+                            <li>✓ Automatic memory &amp; shot limit clamping</li>
+                            <li>✓ Hardware-neutral failover to local MPS classical solvers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARCHITECTURE SECTION (4 LAYERS) -->
+        <section id="architecture" class="section-padded">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">System Architecture</span>
+                    <h2 class="section-title">Decoupled 4-Layer Modular Pipeline</h2>
+                    <p class="section-subtitle">Domain physics, cost routing, and presentation layers are strictly separated, ensuring zero hardcoding and maximum adaptability.</p>
+                </div>
+
+                <div class="architecture-stack">
+                    <div class="arch-layer-card">
+                        <div class="arch-num">04</div>
+                        <div class="arch-content">
+                            <div class="arch-meta">
+                                <h3>Layer 4: SaaS API &amp; Presentation Interface</h3>
+                                <span class="badge-tag">REST API / Dynamic Dashboard</span>
+                            </div>
+                            <p>Strict Scientific Rigor &amp; Zero-Mocking Mandate: All UI badges, stress tensors, and verdicts are computed in real time from live algorithmic outputs.</p>
+                        </div>
+                    </div>
+
+                    <div class="arch-layer-card">
+                        <div class="arch-num">03</div>
+                        <div class="arch-content">
+                            <div class="arch-meta">
+                                <h3>Layer 3: Multi-Scale Domain Physics</h3>
+                                <span class="badge-tag">SEI Degradation &amp; Catalysis</span>
+                            </div>
+                            <p>Pluggable physical modules computing E(3)-Equivariant stress tensors, Virial strain matrices, and Arrhenius chemical kinetics.</p>
+                        </div>
+                    </div>
+
+                    <div class="arch-layer-card">
+                        <div class="arch-num">02</div>
+                        <div class="arch-content">
+                            <div class="arch-meta">
+                                <h3>Layer 2: CostGuard Router &amp; QUBO Matrix Mapping</h3>
+                                <span class="badge-tag">QOBLIB / Budget Safeguard</span>
+                            </div>
+                            <p>Translates complex physical constraints into QUBO formulations. Enforces user-configured max budget limits ($50 cap default) and $\chi \le 256$ memory bounds.</p>
+                        </div>
+                    </div>
+
+                    <div class="arch-layer-card">
+                        <div class="arch-num">01</div>
+                        <div class="arch-content">
+                            <div class="arch-meta">
+                                <h3>Layer 1: Core Mechanics &amp; Hardware Dispatch</h3>
+                                <span class="badge-tag">PySCF / Qiskit Aer / Local MPS</span>
+                            </div>
+                            <p>Calculates electronic structure integrals targeting Chemical Accuracy ($\le 0.0016\text{ Hartree}$). Automated tests strictly execute on local CPU simulators.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMERCIAL WEDGE & LIVE SIMULATOR -->
+        <section id="use-cases" class="section-padded bg-subtle">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Initial Commercial Wedge</span>
+                    <h2 class="section-title">Solid-State Battery Mechanics &amp; SEI Interphase</h2>
+                    <p class="section-subtitle">Our first commercial application addresses Solid Electrolyte Interphase (SEI) degradation and lithium dendrite growth—a critical failure point in next-generation solid-state batteries.</p>
+                </div>
+
+                <div class="sim-demo-card">
+                    <div class="sim-grid">
+                        <div class="sim-controls">
+                            <h3 class="sim-control-title">Simulation Parameters</h3>
+                            <div class="form-group">
+                                <label for="temp-input">Operating Temperature (&deg;C)</label>
+                                <input type="number" id="temp-input" class="form-control" value="25" min="-20" max="100">
+                                <small class="form-help">Thermal breakdown threshold &ge; 65&deg;C</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="stress-input">Applied Mechanical Stress (GPa)</label>
+                                <input type="number" id="stress-input" class="form-control" value="0.1" step="0.1" min="0" max="2">
+                                <small class="form-help">Yield stress risk threshold &ge; 0.4 GPa</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget-input">Configurable Cost Guard ($)</label>
+                                <input type="number" id="budget-input" class="form-control" value="50" min="5" max="500">
+                                <small class="form-help">Pre-flight execution spend limit</small>
+                            </div>
+
+                            <button id="run-sim-btn" class="btn-primary-block">Execute MPS Classical Solver</button>
+                            <p class="sim-note">
+                                🔒 Interactive demo simulation preview. Private backend API keys required for production server runs.
+                            </p>
+                        </div>
+                        
+                        <div class="sim-visualization">
+                            <div class="viz-header">
+                                <strong>Multi-Scale Interphase Stress Distribution</strong>
+                                <span class="viz-tag">Real-Time Canvas</span>
+                            </div>
+                            <canvas id="heatmap-canvas" width="600" height="260" class="sim-canvas"></canvas>
+                            <div id="sim-status" class="sim-status-box status-ready">Engine Status: System Idle. Ready for simulation.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVESTORS & DOCUMENTATION SECTION -->
+        <section id="investors" class="section-padded">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Executive Briefing</span>
+                    <h2 class="section-title">Investor &amp; Technical Documentation</h2>
+                    <p class="section-subtitle">Explore our complete business documentation, mathematical white paper, architectural specifications, and open-source licensing compliance.</p>
+                </div>
+
+                <div class="grid-3 gap-medium">
+                    <div class="doc-card">
+                        <div class="doc-icon">📊</div>
+                        <h3 class="doc-title">Investor Pitch Deck</h3>
+                        <p class="doc-desc">Market size ($52B TAM), 8.5/10 investor readiness evaluation, business model, and commercial roadmap.</p>
+                        <button class="btn-secondary-full" onclick="openModal('documents/pitch-deck.md')">Read Pitch Deck</button>
+                    </div>
+
+                    <div class="doc-card">
+                        <div class="doc-icon">📄</div>
+                        <h3 class="doc-title">Technical White Paper</h3>
+                        <p class="doc-desc">Mathematical derivations of our Classical MPS-DMRG matrix mapping to QUBO formulation and CostGuard logic.</p>
+                        <button class="btn-secondary-full" onclick="openModal('documents/whitepaper.md')">Read White Paper</button>
+                    </div>
+
+                    <div class="doc-card">
+                        <div class="doc-icon">⚖️</div>
+                        <h3 class="doc-title">OSS &amp; Licensing Compliance</h3>
+                        <p class="doc-desc">Full audit of QOBLIB integration (Apache 2.0 / CC-BY 4.0), PySCF, PennyLane, and Qiskit compliance.</p>
+                        <button class="btn-secondary-full" onclick="openModal('documents/oss-compliance.md')">Read Compliance</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <strong>HQFAST Engine</strong> &mdash; Hardware-Agnostic Classical-First Quantum Engine
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Top</a>
+                <a href="#" onclick="openAboutModal(); return false;">About Us</a>
+                <a href="#" onclick="openContactModal(); return false;">Contact &amp; Enquiries</a>
+                <a href="#investors">Docs</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DOCUMENT MODAL -->
+    <div class="modal-overlay" id="doc-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title" class="modal-title-text">Document Viewer</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <p>Loading document...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT US MODAL -->
+    <div class="modal-overlay" id="about-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title-text">About HQFAST Engine</h3>
+                <button class="modal-close" onclick="closeAboutModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-heading);">Solving QMA-Hard &amp; NP-Hard Compute Challenges</h2>
+                <p style="margin-bottom: 1rem;">HQFAST is a physical simulation engine designed to bridge the gap between classical HPC tensor networks and quantum hardware processing units (QPUs).</p>
+                <p style="margin-bottom: 1rem;">By executing Matrix Product States (MPS-DMRG) classically down to Chemical Accuracy (&le; 1.6 mHa), HQFAST eliminates unneeded QPU sampling costs while guaranteeing complete hardware independence across superconducting, trapped-ion, and neutral-atom backends.</p>
+                <h3 style="font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-heading);">Our Core Principles</h3>
+                <ul style="margin-left: 1.25rem; margin-bottom: 1.5rem;">
+                    <li><strong>Strict Scientific Rigor:</strong> Zero hardcoded or mocked verdicts. Every result is dynamically calculated.</li>
+                    <li><strong>Configurable Cost Guard:</strong> Real-time budget safeguards preventing cloud financial runaway.</li>
+                    <li><strong>Domain Neutrality:</strong> Pluggable architecture ready for battery chemistry, green catalysis, and combinatorial optimization.</li>
+                </ul>
+                <button class="btn-primary" onclick="closeAboutModal(); openContactModal();">Get in Touch with Our Team &rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT US / ENQUIRIES FORM MODAL -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal-content" style="max-width: 580px;">
+            <div class="modal-header">
+                <h3 class="modal-title-text">Capture Enquiry &amp; Request Demo</h3>
+                <button class="modal-close" onclick="closeContactModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="margin-bottom: 1.25rem; color: var(--text-muted); font-size: 0.9rem;">
+                    Please fill out your details below. Our technical engineering and executive team will respond within 24 hours.
+                </p>
+
+                <form id="enquiry-form" onsubmit="submitEnquiry(event)">
+                    <div class="form-group">
+                        <label for="contact-name">Full Name / Username *</label>
+                        <input type="text" id="contact-name" class="form-control" placeholder="e.g. Dr. Alex Mercer" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Business Email Address *</label>
+                        <input type="email" id="contact-email" class="form-control" placeholder="alex.mercer@organization.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number *</label>
+                        <input type="tel" id="contact-phone" class="form-control" placeholder="+1 (555) 019-2834" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Message / Research Inquiry *</label>
+                        <textarea id="contact-message" class="form-control" rows="4" placeholder="Tell us about your physical chemistry simulation or optimization requirements..." required style="resize: vertical;"></textarea>
+                    </div>
+
+                    <div id="enquiry-status" style="display: none; margin-bottom: 1rem; padding: 0.75rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600;"></div>
+
+                    <button type="submit" id="submit-enquiry-btn" class="btn-primary-block">Submit Enquiry &rarr;</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/simulator-preview.js"></script>
+</body>
+</html>
