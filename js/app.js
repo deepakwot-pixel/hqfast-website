@@ -85,9 +85,8 @@ function closeContactModal() {
     document.getElementById('contact-modal').style.display = 'none';
 }
 
-// Google Apps Script Web App URL
-// IMPORTANT: You will replace this string with your own URL after following the setup steps!
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzzUAAaMDCENeyEyaAX1I1dpi65PDHNIfuQ76blCFI-Lka6tQOeuNKfqLTsWVid3kc/exec";
+// Form Submission Endpoint (FormSubmit - Direct Email Delivery)
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/deepak@hqfast.com";
 
 async function submitEnquiry(event) {
     event.preventDefault();
@@ -101,21 +100,19 @@ async function submitEnquiry(event) {
     btn.textContent = 'Submitting Enquiry...';
     status.style.display = 'none';
 
-    // Convert FormData to URLSearchParams so Google Apps Script can parse it via e.parameter
     const formData = new FormData(form);
-    const urlEncodedData = new URLSearchParams(formData).toString();
 
     try {
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
+        const response = await fetch(FORM_ENDPOINT, {
             method: 'POST',
-            body: urlEncodedData,
+            body: formData,
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            mode: 'no-cors' // Required for simple Google Apps Script posts
+                'Accept': 'application/json'
+            }
         });
 
-        // no-cors mode won't return a readable success status, so we assume success if no fetch error is thrown
+        const data = await response.json();
+
         btn.disabled = false;
         btn.textContent = 'Submit Enquiry →';
         
@@ -123,7 +120,7 @@ async function submitEnquiry(event) {
         status.style.background = '#ecfdf5';
         status.style.color = '#059669';
         status.style.border = '1px solid #059669';
-        status.innerHTML = `✓ Thank you, ${name}! Your enquiry has been routed directly to our engineering team.`;
+        status.innerHTML = `✓ Thank you, ${name}! Your enquiry has been routed directly to our executive engineering team.`;
         
         // Reset form inputs after delay
         setTimeout(() => {
@@ -139,6 +136,6 @@ async function submitEnquiry(event) {
         status.style.background = '#fef2f2';
         status.style.color = '#991b1b';
         status.style.border = '1px solid #991b1b';
-        status.innerHTML = `⚠ There was an error submitting your request. Please email us directly.`;
+        status.innerHTML = `⚠ There was an error submitting your request. Please email us directly at deepak@hqfast.com.`;
     }
 }
