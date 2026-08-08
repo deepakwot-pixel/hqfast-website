@@ -101,13 +101,17 @@ async function submitEnquiry(event) {
     btn.textContent = 'Submitting Enquiry...';
     status.style.display = 'none';
 
-    // We use FormData to automatically capture all fields with a 'name' attribute
+    // Convert FormData to URLSearchParams so Google Apps Script can parse it via e.parameter
     const formData = new FormData(form);
+    const urlEncodedData = new URLSearchParams(formData).toString();
 
     try {
         const response = await fetch(GOOGLE_SCRIPT_URL, {
             method: 'POST',
-            body: formData,
+            body: urlEncodedData,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
             mode: 'no-cors' // Required for simple Google Apps Script posts
         });
 
