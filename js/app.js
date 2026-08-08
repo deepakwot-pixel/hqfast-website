@@ -87,7 +87,7 @@ function closeContactModal() {
 
 // Google Apps Script Web App URL
 // IMPORTANT: You will replace this string with your own URL after following the setup steps!
-const GOOGLE_SCRIPT_URL = "REPLACE_ME_WITH_YOUR_WEB_APP_URL";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzzUAAaMDCENeyEyaAX1I1dpi65PDHNIfuQ76blCFI-Lka6tQOeuNKfqLTsWVid3kc/exec";
 
 async function submitEnquiry(event) {
     event.preventDefault();
