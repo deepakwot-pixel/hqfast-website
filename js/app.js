@@ -85,22 +85,33 @@ function closeContactModal() {
     document.getElementById('contact-modal').style.display = 'none';
 }
 
-// Form Submission simulation
-function submitEnquiry(event) {
+// Google Apps Script Web App URL
+// IMPORTANT: You will replace this string with your own URL after following the setup steps!
+const GOOGLE_SCRIPT_URL = "REPLACE_ME_WITH_YOUR_WEB_APP_URL";
+
+async function submitEnquiry(event) {
     event.preventDefault();
     
+    const form = document.getElementById('enquiry-form');
     const name = document.getElementById('contact-name').value;
-    const email = document.getElementById('contact-email').value;
-    const phone = document.getElementById('contact-phone').value;
-    const message = document.getElementById('contact-message').value;
-
     const btn = document.getElementById('submit-enquiry-btn');
     const status = document.getElementById('enquiry-status');
 
     btn.disabled = true;
     btn.textContent = 'Submitting Enquiry...';
+    status.style.display = 'none';
 
-    setTimeout(() => {
+    // We use FormData to automatically capture all fields with a 'name' attribute
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors' // Required for simple Google Apps Script posts
+        });
+
+        // no-cors mode won't return a readable success status, so we assume success if no fetch error is thrown
         btn.disabled = false;
         btn.textContent = 'Submit Enquiry →';
         
@@ -108,16 +119,22 @@ function submitEnquiry(event) {
         status.style.background = '#ecfdf5';
         status.style.color = '#059669';
         status.style.border = '1px solid #059669';
-        status.innerHTML = `✓ Thank you, ${name}! Your enquiry has been received. Our executive engineering team will contact you at ${email} or ${phone} shortly.`;
-
-        // Save local copy to localStorage for demo persistence
-        const existing = JSON.parse(localStorage.getItem('hqfast_enquiries') || '[]');
-        existing.push({ name, email, phone, message, timestamp: new Date().toISOString() });
-        localStorage.setItem('hqfast_enquiries', JSON.stringify(existing));
-
+        status.innerHTML = `✓ Thank you, ${name}! Your enquiry has been routed directly to our engineering team.`;
+        
         // Reset form inputs after delay
         setTimeout(() => {
-            document.getElementById('enquiry-form').reset();
+            form.reset();
         }, 2000);
-    }, 800);
+
+    } catch (error) {
+        console.error('Error submitting form!', error);
+        btn.disabled = false;
+        btn.textContent = 'Submit Enquiry →';
+        
+        status.style.display = 'block';
+        status.style.background = '#fef2f2';
+        status.style.color = '#991b1b';
+        status.style.border = '1px solid #991b1b';
+        status.innerHTML = `⚠ There was an error submitting your request. Please email us directly.`;
+    }
 }
