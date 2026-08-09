@@ -232,6 +232,28 @@
                     <div class="sim-grid">
                         <div class="sim-controls">
                             <h3 class="sim-control-title">Simulation Parameters</h3>
+                            
+                            <div class="form-group">
+                                <label for="sim-mode-select">Target Simulation Mode</label>
+                                <select id="sim-mode-select" class="form-control">
+                                    <option value="sei">Anode SEI Passivation (Li-Metal Anode)</option>
+                                    <option value="cei">Cathode CEI Degradation &amp; Arrhenius Transport</option>
+                                    <option value="qubo">QUBO Class 12 Battery Module Cell Layout</option>
+                                </select>
+                                <small class="form-help">Select multi-scale physical solver</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="chemistry-select">Chemistry Material Preset</label>
+                                <select id="chemistry-select" class="form-control">
+                                    <option value="nmc811">NMC-811 (LiNi0.8Mn0.1Co0.1O2 High-Ni Cathode)</option>
+                                    <option value="nmc622">NMC-622 (LiNi0.6Mn0.2Co0.2O2 Cathode)</option>
+                                    <option value="lfp">LFP (LiFePO4 Stable Phosphate Cathode)</option>
+                                    <option value="li_sei">Li-Metal Anode Interphase (LiF/Li2CO3)</option>
+                                </select>
+                                <small class="form-help">Atomic geometry &amp; electronic structure reference</small>
+                            </div>
+
                             <div class="form-group">
                                 <label for="temp-input">Operating Temperature (&deg;C)</label>
                                 <input type="number" id="temp-input" class="form-control" value="25" min="-20" max="100">
