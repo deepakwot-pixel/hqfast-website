@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HQFAST | Hardware-Agnostic Hybrid Compute Platform</title>
-    <meta name="description" content="HQFAST is an enterprise classical-first hybrid compute engine that solves QMA-hard and NP-hard physical simulation and optimization problems with strict, configurable cost caps.">
+    <title>HQFAST | Universal Hybrid Quantum World Simulator &amp; Optimizer</title>
+    <meta name="description" content="HQFAST is an enterprise classical-first hybrid quantum engine that solves QMA-hard physical simulations and NP-hard combinatorial optimization problems with strict, configurable cost caps.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2338bdf8'/%3E%3Cstop offset='100%25' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Inter, sans-serif' font-weight='800' font-size='52' fill='%23ffffff' text-anchor='middle'%3EHQ%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,14 +15,17 @@
         <div class="nav-container">
             <a href="#" class="brand-logo">
                 <span class="brand-icon">⬡</span> HQFAST
-                <span class="brand-badge">v1.2</span>
+                <span class="brand-badge">v2.0</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#platform">Platform</a></li>
-                <li><a href="#cost-guard">ROI &amp; Savings</a></li>
+                <li><a href="#dual-engine">Dual Engines</a></li>
+                <li><a href="#domains">Universal Domains</a></li>
+                <li><a href="#cost-guard">CostGuard ROI</a></li>
                 <li><a href="#architecture">Architecture</a></li>
-                <li><a href="#" onclick="openAboutModal(); return false;">About Us</a></li>
-                <li><a href="#" onclick="openContactModal(); return false;">Contact</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#investors">Docs</a></li>
+                <li><a href="#" onclick="openAboutModal(); return false;">About</a></li>
             </ul>
             <div style="display: flex; gap: 0.75rem; align-items: center;">
                 <button class="btn-primary-sm" onclick="openContactModal()">Request Demo</button>
@@ -35,13 +38,13 @@
         <section id="hero" class="hero-section">
             <div class="container">
                 <div class="pill-tag">
-                    <span class="pill-dot"></span> Hardware-Agnostic Hybrid Compute
+                    <span class="pill-dot"></span> Universal Classical-First Hybrid Quantum Engine
                 </div>
                 
-                <h1 class="hero-title">High-Performance Classical Engine.<br><span class="highlight-text">Zero Quantum Cost Runaway.</span></h1>
+                <h1 class="hero-title">Simulate Physical Reality.<br><span class="highlight-text">Solve Intractable QMA &amp; NP-Hard Problems.</span></h1>
                 
                 <p class="hero-subtitle">
-                    HQFAST solves intractable <strong>QMA-hard</strong> physical chemistry and <strong>NP-hard</strong> combinatorial optimization problems. By executing classical tensor networks first and enforcing <strong>configurable strict budget caps</strong>, HQFAST eliminates financial risk while remaining compatible with all leading quantum hardware backends.
+                    HQFAST is the universal hybrid compute platform solving extreme electronic structure physics and large-scale combinatorial optimization. By executing high-performance tensor networks (MPS-DMRG) classically first and enforcing <strong>configurable strict budget caps</strong>, HQFAST eliminates quantum cost runaway while accelerating deep simulations across chemistry, pharmacology, catalysis, and complex networks.
                 </p>
 
                 <div class="hero-cta-group">
@@ -49,27 +52,27 @@
                     <button class="btn-secondary" onclick="openModal('documents/whitepaper.md')">Read Technical White Paper</button>
                 </div>
 
-                <!-- ROI & COST METRICS BAND -->
+                <!-- ROI & CAPABILITIES METRICS BAND -->
                 <div class="metrics-grid">
                     <div class="metric-card">
-                        <div class="metric-val">$120K+</div>
-                        <div class="metric-lbl">Est. Savings per Complex Material Simulation</div>
-                        <div class="metric-sub">94%+ reduction vs raw QPU shot costs</div>
+                        <div class="metric-val">&le;1.6 mHa</div>
+                        <div class="metric-lbl">Guaranteed Chemical Accuracy</div>
+                        <div class="metric-sub">Sub-millihartree exact ground states</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-val">Configurable</div>
-                        <div class="metric-lbl">Strict Financial Budget Caps</div>
-                        <div class="metric-sub">User-set max job limit ($10 &ndash; $500+)</div>
+                        <div class="metric-val">NP-Hard</div>
+                        <div class="metric-lbl">QOBLIB QUBO Optimization</div>
+                        <div class="metric-sub">Native combinatorial solvers</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-val">94%+</div>
+                        <div class="metric-lbl">Cloud Compute Cost Reduction</div>
+                        <div class="metric-sub">vs uncompressed raw QPU shot costs</div>
                     </div>
                     <div class="metric-card">
                         <div class="metric-val">100% Neutral</div>
                         <div class="metric-lbl">Quantum Hardware Independent</div>
-                        <div class="metric-sub">Superconducting, Trapped-Ion, &amp; Neutral-Atom</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-val">&le;1.6 mHa</div>
-                        <div class="metric-lbl">Guaranteed Chemical Accuracy</div>
-                        <div class="metric-sub">Strict physical precision standard</div>
+                        <div class="metric-sub">Superconducting, Ion, Atom &amp; Local MPS</div>
                     </div>
                 </div>
             </div>
@@ -79,9 +82,9 @@
         <section id="platform" class="section-padded">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Quantum Hardware Independence</span>
+                    <span class="section-tag">Hardware-Agnostic Foundation</span>
                     <h2 class="section-title">Classical-First Core. Fully Agnostic QPU Integration.</h2>
-                    <p class="section-subtitle">You are never locked into a single quantum hardware vendor. HQFAST computes the heaviest electronic wavefunctions classically via Matrix Product States (MPS-DMRG), dispatching only minimal, highly reduced QUBO sub-problems to external quantum backends.</p>
+                    <p class="section-subtitle">You are never locked into a single quantum hardware vendor. HQFAST executes the heaviest electronic wavefunctions classically via Matrix Product States (MPS-DMRG), dispatching only minimal, highly reduced sub-problems to external quantum backends when entanglement demands it.</p>
                 </div>
 
                 <div class="hybrid-visual-grid">
@@ -104,8 +107,8 @@
                         <div class="feature-box">
                             <div class="feature-icon">🛡️</div>
                             <div>
-                                <h3>Classical-First Fallback &amp; Acceleration</h3>
-                                <p>If QPU availability drops or queue latency spikes, HQFAST automatically executes classical tensor networks (JAX/PySCF) down to Chemical Accuracy ($\le 1.6\text{ mHa}$) without stopping work.</p>
+                                <h3>Classical-First Tensor Fallback</h3>
+                                <p>If QPU availability drops or queue latency spikes, HQFAST automatically executes classical tensor networks (MPS-DMRG) down to Chemical Accuracy (&le; 1.6 mHa) on local CPU/GPU hardware.</p>
                             </div>
                         </div>
 
@@ -113,9 +116,111 @@
                             <div class="feature-icon">🧩</div>
                             <div>
                                 <h3>Integrated QOBLIB QUBO Solvers</h3>
-                                <p>Includes built-in open-source combinatorial optimization algorithms (Apache 2.0 / CC-BY) for local, zero-cloud execution of NP-hard allocation problems.</p>
+                                <p>Includes built-in open-source combinatorial optimization algorithms (Apache 2.0 / CC-BY) for local, zero-cloud execution of NP-hard allocation and topology problems.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DUAL-ENGINE CORE: QMA-HARD & NP-HARD -->
+        <section id="dual-engine" class="section-padded bg-subtle">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Dual-Engine Core</span>
+                    <h2 class="section-title">Solving the Two Hardest Mathematical Classes in Science</h2>
+                    <p class="section-subtitle">Whether simulating quantum many-body Schrödinger wavefunctions or optimizing exponential discrete combinatorial spaces, HQFAST routes computation through the most efficient classical and quantum pathways.</p>
+                </div>
+
+                <div class="grid-2 gap-large">
+                    <!-- PILLAR 1: QMA-HARD PHYSICAL SIMULATION -->
+                    <div class="engine-pillar-card">
+                        <div class="pillar-badge quantum-badge">Physical World Simulation</div>
+                        <h3 class="pillar-title">QMA-Hard Electronic Structure</h3>
+                        <p class="pillar-desc">Direct simulation of multi-electron correlation, atomic force fields, and chemical reaction pathways without empirical approximations.</p>
+                        
+                        <div class="pillar-feature-list">
+                            <div class="pillar-feature-item">
+                                <strong>PySCF Electronic Integrals:</strong> Ab-initio 1-body and 2-body Coulomb/exchange tensor generation (h1, h2).
+                            </div>
+                            <div class="pillar-feature-item">
+                                <strong>Matrix-Free Sparse FCI:</strong> Exact determinant-vector algebra solving 44,000+ Fock states in &lt;6 MB RAM.
+                            </div>
+                            <div class="pillar-feature-item">
+                                <strong>Fermionic MPO DMRG:</strong> Full Jordan-Wigner single-body hopping (XX+YY) and 2-body interactions with Fiedler orbital ordering.
+                            </div>
+                            <div class="pillar-feature-item">
+                                <strong>Climbing-Image NEB:</strong> Exact transition state saddle-point barrier search with adaptive force convergence.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PILLAR 2: NP-HARD OPTIMIZATION -->
+                    <div class="engine-pillar-card">
+                        <div class="pillar-badge qubo-badge">Combinatorial Optimization</div>
+                        <h3 class="pillar-title">NP-Hard Discrete &amp; Topology Solvers</h3>
+                        <p class="pillar-desc">Solving large-scale binary quadratic optimization problems under strict physical, topological, and budget constraints.</p>
+                        
+                        <div class="pillar-feature-list">
+                            <div class="pillar-feature-item">
+                                <strong>QUBO &amp; Ising Spin Glasses:</strong> Transformation of discrete NP-hard problems into Ising Hamiltonians.
+                            </div>
+                            <div class="pillar-feature-item">
+                                <strong>QOBLIB Benchmark Integration:</strong> Native support for standard ZIB and IBM Quantum combinatorial optimization instances.
+                            </div>
+                            <div class="pillar-feature-item">
+                                <strong>Vectorized Simulated Annealing:</strong> High-throughput Metropolis-Hastings stochastic solver with geometric cooling.
+                            </div>
+                            <div class="pillar-feature-item">
+                                <strong>Smart Hardware Dispatch:</strong> Automatic complexity evaluation routing to D-Wave/QPU or classical tensor solvers.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UNIVERSAL INDUSTRY VERTICALS & DOMAIN ADAPTERS -->
+        <section id="domains" class="section-padded">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Universal Applications</span>
+                    <h2 class="section-title">Pluggable Layer 4 Domain Adapters</h2>
+                    <p class="section-subtitle">HQFAST's mathematical and quantum core is domain-agnostic. Industry-specific data and physical constraints plug directly into Layer 4 without modifying underlying quantum solvers.</p>
+                </div>
+
+                <div class="grid-4 gap-medium">
+                    <!-- DOMAIN 1: BATTERY -->
+                    <div class="domain-card highlight-card">
+                        <div class="domain-icon">🔋</div>
+                        <div class="domain-tag">Commercial Wedge</div>
+                        <h3 class="domain-title">Battery Chemistry &amp; SEI</h3>
+                        <p class="domain-desc">Solid Electrolyte Interphase passivation, lithium dendrite kinetics, and Arrhenius thermal breakdown modeling for solid-state batteries.</p>
+                    </div>
+
+                    <!-- DOMAIN 2: PHARMACOLOGY -->
+                    <div class="domain-card">
+                        <div class="domain-icon">💊</div>
+                        <div class="domain-tag">Pharmacology</div>
+                        <h3 class="domain-title">Targeted Oncology &amp; Docking</h3>
+                        <p class="domain-desc">QM/MM active-site partitioning for small-molecule inhibitor binding free energy (&Delta;G_bind) in oncology drug discovery.</p>
+                    </div>
+
+                    <!-- DOMAIN 3: CATALYSIS -->
+                    <div class="domain-card">
+                        <div class="domain-icon">🧪</div>
+                        <div class="domain-tag">Green Chemistry</div>
+                        <h3 class="domain-title">Enzyme Catalysis &amp; MOFs</h3>
+                        <p class="domain-desc">Transition-state barrier (E_a) search for multi-reference cofactors (Nitrogenase) and porous MOF carbon capture adsorption.</p>
+                    </div>
+
+                    <!-- DOMAIN 4: TOPOLOGY & LOGISTICS -->
+                    <div class="domain-card">
+                        <div class="domain-icon">⚡</div>
+                        <div class="domain-tag">Grid &amp; Logistics</div>
+                        <h3 class="domain-title">Topology &amp; Module Placement</h3>
+                        <p class="domain-desc">High-density battery pack cell topology, resource scheduling, and power grid dispatch via NP-hard QUBO formulations.</p>
                     </div>
                 </div>
             </div>
@@ -152,7 +257,7 @@
                             <span class="cost-label">Max Configurable Budget Cap / Run</span>
                             <span class="cost-value">$10.00 &ndash; $50.00</span>
                         </div>
-                        <p class="roi-desc">Users define strict max spend limits per job. CostGuard dynamically clamps tensor bond dimension ($\chi \le 256$) before any remote dispatch.</p>
+                        <p class="roi-desc">Users define strict max spend limits per job. CostGuard dynamically clamps tensor bond dimension (&chi; &le; 256) before any remote dispatch.</p>
                         <ul class="check-list success">
                             <li>✓ Strict pre-flight budget verification</li>
                             <li>✓ Automatic memory &amp; shot limit clamping</li>
@@ -169,7 +274,7 @@
                 <div class="section-header">
                     <span class="section-tag">System Architecture</span>
                     <h2 class="section-title">Decoupled 4-Layer Modular Pipeline</h2>
-                    <p class="section-subtitle">Domain physics, cost routing, and presentation layers are strictly separated, ensuring zero hardcoding and maximum adaptability.</p>
+                    <p class="section-subtitle">Domain physics, cost routing, and presentation layers are strictly separated, ensuring zero hardcoding and maximum adaptability across scientific domains.</p>
                 </div>
 
                 <div class="architecture-stack">
@@ -177,7 +282,7 @@
                         <div class="arch-num">04</div>
                         <div class="arch-content">
                             <div class="arch-meta">
-                                <h3>Layer 4: SaaS API &amp; Presentation Interface</h3>
+                                <h3>Layer 4: SaaS API &amp; Universal Domain Adapters</h3>
                                 <span class="badge-tag">REST API / Dynamic Dashboard</span>
                             </div>
                             <p>Strict Scientific Rigor &amp; Zero-Mocking Mandate: All UI badges, stress tensors, and verdicts are computed in real time from live algorithmic outputs.</p>
@@ -188,10 +293,10 @@
                         <div class="arch-num">03</div>
                         <div class="arch-content">
                             <div class="arch-meta">
-                                <h3>Layer 3: Multi-Scale Domain Physics</h3>
-                                <span class="badge-tag">SEI Degradation &amp; Catalysis</span>
+                                <h3>Layer 3: Smart Complexity Router &amp; CostGuard</h3>
+                                <span class="badge-tag">QOBLIB / Budget Safeguard</span>
                             </div>
-                            <p>Pluggable physical modules computing E(3)-Equivariant stress tensors, Virial strain matrices, and Arrhenius chemical kinetics.</p>
+                            <p>Evaluates von Neumann entanglement entropy (S_vN) and circuit depth. Clamps bond dimensions (&chi; &le; 256) and enforces strict $50 max budget limits.</p>
                         </div>
                     </div>
 
@@ -199,10 +304,10 @@
                         <div class="arch-num">02</div>
                         <div class="arch-content">
                             <div class="arch-meta">
-                                <h3>Layer 2: CostGuard Router &amp; QUBO Matrix Mapping</h3>
-                                <span class="badge-tag">QOBLIB / Budget Safeguard</span>
+                                <h3>Layer 2: Multi-Scale Physical Domain Engines</h3>
+                                <span class="badge-tag">Kinetics &amp; Force Fields</span>
                             </div>
-                            <p>Translates complex physical constraints into QUBO formulations. Enforces user-configured max budget limits ($50 cap default) and $\chi \le 256$ memory bounds.</p>
+                            <p>Pluggable physical modules computing E(3)-Equivariant Born-Oppenheimer stress tensors, Virial strain matrices, and Arrhenius chemical kinetics.</p>
                         </div>
                     </div>
 
@@ -210,23 +315,23 @@
                         <div class="arch-num">01</div>
                         <div class="arch-content">
                             <div class="arch-meta">
-                                <h3>Layer 1: Core Mechanics &amp; Hardware Dispatch</h3>
-                                <span class="badge-tag">PySCF / Qiskit Aer / Local MPS</span>
+                                <h3>Layer 1: Core Mathematical Solvers &amp; Hardware Dispatch</h3>
+                                <span class="badge-tag">PySCF / Sparse FCI / MPO DMRG</span>
                             </div>
-                            <p>Calculates electronic structure integrals targeting Chemical Accuracy ($\le 0.0016\text{ Hartree}$). Automated tests strictly execute on local CPU simulators.</p>
+                            <p>Calculates electronic structure integrals targeting Chemical Accuracy (&le; 0.0016 Hartree). Automated tests strictly execute on local CPU simulators.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- COMMERCIAL WEDGE & LIVE SIMULATOR -->
-        <section id="use-cases" class="section-padded bg-subtle">
+        <!-- COMMERCIAL WEDGE & LIVE SIMULATOR CASE STUDY -->
+        <section id="case-study" class="section-padded bg-subtle">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Initial Commercial Wedge</span>
+                    <span class="section-tag">Live Domain Case Study</span>
                     <h2 class="section-title">Solid-State Battery Mechanics &amp; SEI Interphase</h2>
-                    <p class="section-subtitle">Our first commercial application addresses Solid Electrolyte Interphase (SEI) degradation and lithium dendrite growth—a critical failure point in next-generation solid-state batteries.</p>
+                    <p class="section-subtitle">See how HQFAST's universal tensor network and Arrhenius kinetics engine predicts interphase breakdown and thermal runaway in real time on our first commercial application.</p>
                 </div>
 
                 <div class="sim-demo-card">
@@ -330,7 +435,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <strong>HQFAST Engine</strong> &mdash; Hardware-Agnostic Classical-First Quantum Engine
+                <strong>HQFAST Engine</strong> &mdash; Universal Hybrid Quantum World Simulator &amp; Optimizer
             </div>
             <div class="footer-links">
                 <a href="#hero">Top</a>
@@ -362,14 +467,15 @@
                 <button class="modal-close" onclick="closeAboutModal()">&times;</button>
             </div>
             <div class="modal-body">
-                <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-heading);">Solving QMA-Hard &amp; NP-Hard Compute Challenges</h2>
-                <p style="margin-bottom: 1rem;">HQFAST is a physical simulation engine designed to bridge the gap between classical HPC tensor networks and quantum hardware processing units (QPUs).</p>
+                <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-heading);">Universal Physical Simulation &amp; Optimization</h2>
+                <p style="margin-bottom: 1rem;">HQFAST is a universal hybrid quantum engine designed to bridge the gap between classical HPC tensor networks and quantum processing units (QPUs).</p>
                 <p style="margin-bottom: 1rem;">By executing Matrix Product States (MPS-DMRG) classically down to Chemical Accuracy (&le; 1.6 mHa), HQFAST eliminates unneeded QPU sampling costs while guaranteeing complete hardware independence across superconducting, trapped-ion, and neutral-atom backends.</p>
-                <h3 style="font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-heading);">Our Core Principles</h3>
+                <h3 style="font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-heading);">Our Core Capabilities</h3>
                 <ul style="margin-left: 1.25rem; margin-bottom: 1.5rem;">
+                    <li><strong>QMA-Hard Simulation:</strong> Exact electronic structure, correlation energies, and transition state barriers.</li>
+                    <li><strong>NP-Hard Optimization:</strong> QUBO, Ising spin glasses, and combinatorial resource allocation.</li>
                     <li><strong>Strict Scientific Rigor:</strong> Zero hardcoded or mocked verdicts. Every result is dynamically calculated.</li>
                     <li><strong>Configurable Cost Guard:</strong> Real-time budget safeguards preventing cloud financial runaway.</li>
-                    <li><strong>Domain Neutrality:</strong> Pluggable architecture ready for battery chemistry, green catalysis, and combinatorial optimization.</li>
                 </ul>
                 <button class="btn-primary" onclick="closeAboutModal(); openContactModal();">Get in Touch with Our Team &rarr;</button>
             </div>
